@@ -16,9 +16,29 @@ public class CalculadoraIMC {
         System.out.println("Insira sua altura: ");
         altura = entrada.nextFloat();
 
-        var imc = peso / (altura*altura);
+        float imc = peso / (altura*altura);
 
-        System.out.println("Seu IMC é: %.2f" + imc);
+        System.out.printf("Seu IMC é: %.2f" , imc);
+
+        if (imc <= 18.5){
+            System.out.println("Você está abaixo do peso!");
+
+        } else if ((imc >= 18.5) && (imc <=24.9)) {
+            System.out.println("Você está no peso ideal.");
+
+        } else if ((imc >= 25) && (imc <= 29.9)) {
+            System.out.println("Você está levemente acima do peso");
+
+        } else if ((imc >= 30) && (imc <= 34.9)) {
+            System.out.println("Você está na obesidade grau I");
+
+        } else if ((imc >= 35) && (imc <= 39.9)) {
+            System.out.println("Você está na obesidade grau II");
+
+        } else {
+            System.out.println("Você está na obesidade mórbida.");
+        }
+
     }
 
 }
